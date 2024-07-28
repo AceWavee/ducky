@@ -1,0 +1,269 @@
+<!-- using sematic tags like header footer main etc -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+</head>
+<body>
+    <header> EDUCATION </header>
+    <header> PROJECTS  </header>
+    <HR>
+
+     <pre>
+        <footer>
+               contact me a niga niga world 
+        </footer>
+     </pre> 
+     
+     <br>
+     <hr>
+
+     <main>
+        <section>
+            EDUCATION : GEMS ENGLISH SCHOOL | ABR FOUNDATION SCHOOL.
+            <!-- TO CREATE A SPECIFIC SECTION ON A WEBSITE PAGE . -->
+        </section>
+     
+    <ARTICLE> 
+        MY EXPERIENCES .
+    </ARTICLE>
+    
+    <!-- ASIDE TAGS USED FOR OTHER THAN MAIN CONTENT ON WEBSITE (EG : ADS ) -->
+
+    <ASIDE>
+        THIS IS AN AD
+    </ASIDE>
+
+    <!-- TO REDIRECT USERS TO ANOTHER LINK BUT IN ANOTHER TAB -->
+     <a href = "https://www.google.com" target = "_main" > GOOGLE  </a>
+     <BR>
+
+     <!-- to make images clickable  -->
+     <a href = "https://www.google.com" target = "_main" > <img src ="https://cdn.logojoy.com/wp-content/uploads/20230801145608/Current-Google-logo-2015-2023-600x203.png" alt = "GOOGLE" > </a>
+
+     <!-- NON SEMANTIC TAGS : EG : DIV , SPAN -->
+      <!-- div is a block element nd takes full width whereas inline elements take only that space which is needed. -->
+    
+      <div>
+        <p>hello</p>
+        <p> hii</p>
+        <p> niga mon</p>
+      </div>
+<!--  this is considered as 1 block -->
+
+  <div>
+      <p>bye bye</p>
+      <p> cya</p>
+      <p>dont come again</p>
+  </div>
+
+  <span> bye </span>
+  <!-- only takes space required not the entire block. -->
+
+  <!-- lists in html are classified as : ordered and unordered . -->
+   <!-- unordered : -->
+
+   <!-- HEADINGS -->
+   <ul>
+    <li>
+        APPLE 
+        <!-- SUB HEADINGS  -->
+        <UL>
+            <LI>
+                RED IN COLOR 
+                AVAILABLE IN WINTER 
+            </LI>
+        </UL>
+         MANGO 
+         <UL>
+            <LI>
+                YELLOW  IN COLOR 
+                AVAILABLE IN SUMMER
+            </LI>
+        </UL>
+    </li>
+   </ul>
+
+<!-- ORDERED LISTING ( ORDERED AS 1 2 3 ..) -->
+
+<!-- HEADINGS -->
+<Ul>
+    <li>
+        APPLE 
+        <!-- SUB HEADINGS  -->
+        <OL>
+            <LI>
+                RED IN COLOR 
+                AVAILABLE IN WINTER 
+            </LI>
+        </OL>
+     <LI>
+<UL>
+
+<HR>
+
+    <!-- TABLES IN HTML -->
+<!-- TR TO CREATE TABLE ROWS -->
+ <!-- TD TO ENTER TABLE DATA -->
+<!-- TH TO DISPLAY TABLE HEADER -->
+
+    <TABLE>
+        <TR>
+            <TH>
+                KUSHAGRA
+            </TH>
+            <TH>
+                KAVYANSH
+            <TH>
+        </TR>
+
+        <TR>
+            <TD>
+                1500
+            </TD>
+            <TD>
+                1600
+            </TD>
+        </TR>
+    </TABLE>
+
+    <!-- CAPTIONS IN A TABLE -->
+    
+    <CAPTION >
+        NOOBS LIST
+    </CAPTION>
+     <TABLE>
+        <THEAD >
+             <!-- COLSPAN USED TO CENTRE THE COLUMN HEADING  -->
+        <TR>
+            <TH colspan = "2">
+                KUSHAGRA
+            </TH>
+        </TR>
+    </THEAD>
+       <TBODY>
+    <TR>
+            <TD>
+                1500
+            </TD>
+            <TD>
+                1600
+            </TD>
+        </TR>
+    </TBODY>
+
+    <!-- THEAD USED TO WRAP UP TABLE HEAD -->
+     <!-- TBODY USED TO WRAP UP TABLE BODY. -->
+  
+    </TABLE>
+
+    <HR>
+
+        <!-- FORMS IN HTML : --> 
+         <!-- using action attribute -->
+         <form action = "/action.php"> 
+           <!-- creating input tags -->
+
+           <input type ="text" placeholder="username">
+           <br>
+           <input type ="password" placeholder="password">
+           <!-- in dotted format -->
+
+           <!-- to create radio buttons : -->
+            <BR>
+           <input type ="radio" value = "CLASS XI" name="class" > CLASS XI
+           <BR>
+           <input type ="radio" value = "CLASS XII" name="class" > CLASS XII
+           <!-- NAME CONTAINS THE PART WHICH IS PRINTED WHEREAS VALUE CONTAINS THE PART WHICH IS IN BACKEND -->
+            <!-- SO THEY SHOULD BE IN SYNC. -->
+         
+            <BR>
+                <label for = "101">
+                <input type ="radio" value = "CLASS XI" name="class" ID="101"> CLASS XI
+            </label>
+                <BR>
+                    <label for ="102">
+                <input type ="radio" value = "CLASS XII" name="class" ID="102" > CLASS XII
+            </label>
+                <!-- LABEL IDS USED TO MAKE EVEN TEXT CLICKABLE -->
+
+<!-- class and id (in same group or in different group) : -->
+
+<div id = "id1 " class ="group1">
+
+</div>
+<br>
+<div id = "id2 " class ="group1">
+
+</div>
+       <!-- eg : different student ids but in same  group / class -->
+
+       <!-- buttons / checkboxes for multiple selection -->
+
+    <label for ="PHY">
+        <input type = "checkbox" value = "PHY" name = "subject " id="101" > PHYSICS
+    </label>                        
+<BR>
+    <label for ="CHEM"> 
+        <input type = "checkbox" value = "CHEM" name = "subject " id="102" > CHEMISTRY
+    </label>                        
+<BR>
+    <label for ="MATHS">
+        <input type = "checkbox" value = "MATHS" name = "subject " id="103" > MATHS
+    </label>                        
+<BR>
+
+    <!-- TEXTHOLDER SECTIONS -->
+
+    <textarea name = "feedback" id="104" placeholder="give us your valuable feedback here ">FEEDBACK </textarea>
+        </form>
+<BR>
+    <!-- ADJUSTING ROWS AND COLUMNS IN THIS -->
+    
+    <textarea name = "feedback" id="104" placeholder="give us your valuable feedback here " rows="5" >FEEDBACK  </textarea>
+
+<!-- using dropdowns  -->
+<BR>
+
+<select name ="city">
+    <option value ="delhi" >DELHI</option>
+    <option value ="patna" >PATNA</option>
+    <option value ="varanasi" >VARANASI</option>
+    <option value ="indore" >INDORE</option>
+    <option value ="pune" >PUNE</option>
+
+</select>
+<BR>
+
+<INPUT TYPE="SUBMIT" VALUE = "SUBMIT" >
+
+<BR>
+<BR>
+<BR>
+<BR>
+    <BR>
+
+<HR>
+
+    <!-- TO DISPLAY ENTIRE WEBSITE IN YOURS USE IFRAME TAG -->
+     <!-- USING COPY EMBED-->
+
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/HcOc7P5BMi4?si=HBERBOTxKm8sblG_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     
+</form>
+ <!-- VIDEO TAGS (to used recordings or screen recordings )-->
+
+ <video src="/screenrecording.mov" controls >MY VIDEO</video>
+ <!-- THE SCREEN RECORDING SHOULD BE IN THE FOLDER -->
+  <!-- controls keyword used to show all contro buttons in the video -->
+   <!-- commands like loop , sutoplay can be used to enhance the video. -->
+
+
+
+</main>
+
+</body>
+</html>

@@ -7,20 +7,20 @@ int main(){
     // for ( intialiation; condition; updation; )
     // {
     //  code of the for loop body.
-    // }
+    // } 
     // for example :
-int i=1;
+
+int i=1;        
     for (i = 1; i<=20; i++)
      {
     
     cout<<i<<endl;
     
-    }
-
-
+    } 
+    
 /* while loop syntax :
  while (condition)
- {
+ { 
 
       c++ statements :
 
@@ -47,7 +47,7 @@ int i=1;
 // do{
 //     cout<<i<<endl;
 //     i++;
-
+ 
 // }while (i<=20);
 
 return 0;

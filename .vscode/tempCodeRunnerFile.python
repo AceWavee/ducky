@@ -1,0 +1,53 @@
+pip install schedule
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import schedule
+import time
+
+# Email configuration
+SMTP_SERVER = 'smtp.yourserver.com'  # Example: 'smtp.gmail.com' for Gmail
+SMTP_PORT = 587  # Example: 587 for Gmail TLS
+
+# Email account credentials
+EMAIL_ADDRESS = 'your_email@example.com'
+EMAIL_PASSWORD = 'your_password'
+
+# Function to send email
+def send_email(subject, body, to_email):
+    msg = MIMEMultipart()
+    msg['From'] = EMAIL_ADDRESS
+    msg['To'] = to_email
+    msg['Subject'] = subject
+    msg.attach(MIMEText(body, 'plain'))
+
+    try:
+        server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
+        server.starttls()
+        server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+        server.sendmail(EMAIL_ADDRESS, to_email, msg.as_string())
+        server.quit()
+        print(f"Email sent successfully to {to_email}")
+    except Exception as e:
+        print(f"Failed to send email to {to_email}. Error: {str(e)}")
+
+# Function to send daily report
+def send_daily_report():
+    # Replace with your report generation logic or file reading logic
+    report_body = "Daily Report:\n\nHere is your daily report content."
+
+    # Replace with the recipient's email address
+    recipient_email = 'recipient@example.com'
+
+    # Send email
+    send_email("Daily Report", report_body, recipient_email)
+
+# Schedule the daily report to be sent every day at a specific time
+schedule.every().day.at("08:00").do(send_daily_report)  # Adjust the time as per your preference
+
+# Infinite loop to run the scheduler
+while True:
+    schedule.run_pending()
+    time.sleep(1)
+python send_daily_report.py
+

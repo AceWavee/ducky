@@ -30,16 +30,14 @@ is does print but for next iterations skiiping the condition part . */
 //     break;
 //    }
 
-
-
-cout <<i<<endl;
-   if (i==3)
+if (i==3)
    {
     continue ;
    }
-
+cout <<i<<endl;
 }
   return 0 ;
 }
 
-// 
+//  use of continue statement stated above :
+
