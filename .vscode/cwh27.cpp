@@ -1,9 +1,37 @@
-#include <iostream>
+#include <iostream> // compiler starts reading from here.
 using namespace std;
+
+//  forward declaration
+class complex;
+
+class calculator
+{
+public:
+    int add(int a, int b)
+    {
+        return (a + b);
+    }
+    /* compiler finds an error because there's no existence of complex xlass.
+    / so we need to do forward declaration to the compiler.
+
+     int sumrealcomplex (complex o1 , complex o2){
+     return ( o1.a + o2.a); }  ------> error
+
+    error as we declared that complex class is present but no guarantee that a or b is also present in that class , so we need declaration again. */
+
+    int sumrealcomplex(complex, complex); // declaring
+};
+
+// declaring calculator class as friend in complex class.
 
 class complex
 {
     int a, b;
+// individually declaring frnds but if we have more fn , we can declare entire class as friend .
+
+// syntax :
+//  friend class calculator ;
+    friend int calculator ::sumrealcomplex(complex o1, complex o2);
 
 public:
     int setnum(int v1, int v2)
@@ -12,32 +40,28 @@ public:
         b = v2;
     }
 
-    friend complex sum(complex o1, complex o2);
-    
     void printnum(void)
     {
         cout << "the complex number is : " << a << " + " << b << "i" << endl;
     }
 };
 
-complex sum(complex o1, complex o2)
+// declaring earlier and  execution here.
+int calculator ::sumrealcomplex(complex o1, complex o2)
 {
-    complex o3;
-    o3.setnum((o1.a + o2.a) + (o1.b + o2.b));
-    return o3;
+    return (o1.a + o2.a);
 }
 
 int main()
 {
-    complex c1, c2, sum;
-    c1.setnum(1, 2);
-    c1.printnum();
+    complex o1, o2;
+    o1.setnum(1, 3);
+    o2.setnum(2, 5);
 
-    c2.setnum(3, 4);
-    c2.printnum();
+    calculator calc;
+    int res = calc.sumrealcomplex(o1, o2);
 
-    sum.setnum(c1, c2);
-    sum.printnum();
+    cout << "the sum of real part of complex numbers is" << res << endl;
 
     return 0;
 }

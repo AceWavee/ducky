@@ -18,7 +18,7 @@ using namespace std ;
    }
   
   };
-
+// the fn here is outside the class so it needs permission to access.
   complex sumnum ( complex o1 ,  complex o2){
     complex o3;
     o3.setnumber((o1.a + o2.a) ,(o1.b + o2.b));
